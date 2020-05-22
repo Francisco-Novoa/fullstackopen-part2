@@ -1,18 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import PhonebookService from "./services/numbers"
-
-const ControlledInput = ({ value, onChange, label }) => {
-  return (
-    <div>
-      <div className="bigly" >
-        {label}:
-      </div>
-      <div style={{ display: "inline-block" }}>
-        <input value={value} onChange={(e) => { onChange(e.target.value) }} />
-      </div>
-    </div>
-  )
-}
+import DisplayPhonebooks from "./components/displaycontacts"
+import ControlledInput from "./components/controledinput"
+import NewContact from "./components/newcontact"
+import Notification from "./components/notification"
 
 const Title = ({ text }) => {
   return (
@@ -20,87 +11,7 @@ const Title = ({ text }) => {
   )
 }
 
-const DisplayPhonebooks = ({ persons, remove }) => {
-  return (
-    <table>
 
-      <thead>
-        <tr>
-          <th>
-            Names
-          </th>
-          <th>
-            Number
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        {
-          persons.map((person, i) => {
-            return (<TableRow person={person} key={person.id} remove={remove} />)
-          })
-        }
-      </tbody>
-
-    </table>
-  )
-}
-
-const TableRow = ({ person, remove }) => {
-  return (
-    <tr>
-      <td>
-        {person.name}
-      </td>
-      <td>
-        #{person.number}
-      </td>
-      <td>
-        <button onClick={() => { remove(person.id, person.name) }}>
-          remove
-        </button>
-      </td>
-    </tr>
-  )
-}
-
-const NewContact = ({ newName, setNewName, newPhone, setNewPhone, HandleSubmit }) => {
-  return (
-    <form>
-
-      <ControlledInput
-        value={newName}
-        onChange={setNewName}
-        label={"Name"} />
-
-      <ControlledInput
-        value={newPhone}
-        onChange={setNewPhone}
-        label={"Number"} />
-
-      <div>
-        <button
-          onClick={(e) => { HandleSubmit(e) }}>
-          add
-          </button>
-      </div>
-
-    </form>
-  )
-}
-
-const Notification = ({ message, classes }) => {
-  if (message === null) {
-    return null
-  }
-
-  return (
-    <div className={classes}>
-      {message}
-    </div>
-  )
-}
 
 
 const App = () => {
