@@ -1,0 +1,33 @@
+h2{
+    color: green;
+    font-style: italic;
+}
+.good{
+    background-color: greenyellow;
+    border: green;
+    border-width: 5px;
+    border-style: double;
+    display:"inline-block";
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.bad{
+    background-color: red;
+    border: black;
+    border-width: 5px;
+    border-style: double;
+    display:"inline-block";
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+th{
+    width: 150px;
+}
+
+.bigly{
+    margin-bottom: 2px;
+    width: 100px;
+    display: inline-block;
+}
