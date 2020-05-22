@@ -11,9 +11,6 @@ const Title = ({ text }) => {
   )
 }
 
-
-
-
 const App = () => {
 
   //States
@@ -29,7 +26,6 @@ const App = () => {
   //this one keeps an error log
   const [errorGood, setErrorGood] = useState(null)
   const [errorBad, setErrorBad] = useState(null)
-
 
   //this two keep the inputs
   const [newName, setNewName] = useState('')
@@ -111,6 +107,8 @@ const App = () => {
 
   }
 
+
+  
   //useEffects
   useEffect(() => {
     PhonebookService
