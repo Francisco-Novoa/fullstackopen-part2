@@ -81,6 +81,9 @@ const App = () => {
         }
       }
     }
+    else {
+      window.confirm(`you need to fill both Name and Number fields`)
+    }
   }
 
   const handleFilter = (a) => {
@@ -122,7 +125,7 @@ const App = () => {
 
 
   return (
-    <div>
+    <div className="wrapper">
 
       <Title text="Phonebook." />
 

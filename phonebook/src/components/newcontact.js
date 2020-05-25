@@ -16,8 +16,10 @@ const NewContact = ({ newName, setNewName, newPhone, setNewPhone, HandleSubmit }
           onChange={setNewPhone}
           label={"Number"} />
   
-        <div>
+        <div
+            >
           <button
+            className="newcontact"
             onClick={(e) => { HandleSubmit(e) }}>
             add
             </button>

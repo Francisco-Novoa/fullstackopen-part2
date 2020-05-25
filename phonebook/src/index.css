@@ -27,7 +27,19 @@ th{
 }
 
 .bigly{
-    margin-bottom: 2px;
-    width: 100px;
+    margin-bottom: 5px;
+    width: 125px;
     display: inline-block;
+}
+
+.wrapper{
+    display: block;
+    width: 500px;
+    margin: auto;
+}
+
+.newcontact{
+    float: right;
+    margin-right: 228px;
+   
 }

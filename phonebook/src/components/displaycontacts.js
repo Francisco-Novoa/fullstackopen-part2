@@ -34,10 +34,11 @@ const DisplayPhonebooks = ({ persons, remove }) => {
         </thead>
   
         <tbody>
-          {
+          {persons!==null&&persons!==undefined?
             persons.map((person, i) => {
               return (<TableRow person={person} key={person.id} remove={remove} />)
             })
+            :null
           }
         </tbody>
   
